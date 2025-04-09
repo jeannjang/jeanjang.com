@@ -1,0 +1,87 @@
+---
+title: Why did I start programming? [2]
+date: '2022-09-11'
+tags: ['software engineering', 'me']
+draft: false
+summary: In 2019, I developed a web app to automate employee onboarding and payroll processes, reducing manual work and errors by integrating with Office365 and FlexiTime.
+---
+
+# Introduction
+In 2019, I was working as an office manager for a franchise company. Until then, I hadn’t even thought of doing programming. I tried to increase productivity as much as possible with the given tools, but I was not satisfied. In the end, in the process of solving problems, I started programming with the idea that I should make what I needed by myself.
+
+The bottlenecks and my attempt to improve them can be divided into two stages.
+
+1. Uniting Diversified Tools
+2. Web Application Development
+
+This post is about "2. Web Application Development".
+
+---
+
+# Problem 1. Employee onboarding process
+The company's structure was like this. The head office (office team) directly manages 10 stores across New Zealand through on-site operation teams. The office team was communicating with operation teams. And managing the tools for operation teams was one of the office team works.
+
+After uniting the tools, the work process improved efficiently, but other problems arose. When a staff joined and left the company, the office team had to manually create and delete an Office365 account and a FlexiTime account.
+
+In the past, the head office only manage stores' tool accounts, so it was not often necessary to create and delete accounts. However now all employees had to have their own Office 365 account, and creating and deleting the Office365 account became an additional task for the office.
+
+When a new staff joins the company, he went through the following process:
+>1. The store operation team scaned the employee's required documents and passed them to the office.
+>2. The office team checked the documents and created FlexiTime and Office365 accounts.
+>3. Sending a welcome email to the staff with the login details and how to use Office365.
+
+Due to the nature of the hospitality industry with high turnover, this task was particularly heavy and had to be done manually, resulting in many mistakes and inefficiency. Scanned employee documents were stored in the office warehouse according to the law requiring them to be kept for four years.
+
+# Problem 2. Payruns
+
+Another problem entangled with the onboarding process was payruns. Payrun was done once every two weeks.
+
+> Employees have to agree and sign rosters. Employees' working hours and the use of leaves must be written and signed by the employee himself/herself
+
+In accordance with New Zealand's employment laws above, employees signed on rosters and handwritten their working hours on a timesheet template.
+![img.png](/static/images/blog/why-did-i-start-programming-2/image.png)
+![img.png](/static/images/blog/why-did-i-start-programming-2/image-1.png)
+
+Staff handwrote timesheet templates like the above.
+
+Then, every two weeks, the following process was repeated to proceed with a payrun.
+
+1. Staff fill out timesheets.
+2. Operation teams checked timesheets, scaned and passed them to the head office.
+3. The office team checked all the timesheets from every store.
+4. Proceed with a payrun
+
+Timesheet check items
+>- Whether the maximum and minimum guaranteed hours are met
+>- If a staff requested a leave, make sure it is registered in FlexiTime
+>- Whether timesheets are written according to the announced roster
+>- If staff worked less or more than the roster, the reason
+
+As the number of employees increased, the office had to check nearly 100 timesheets every two weeks. And if any document or information was missing from the onboarding process, we had to wait until we got it, so the payrun was often delayed. And timesheets were also stored in the head office warehouse.
+
+# Try the solutions in the market
+I didn't even think about the option of programming, and of course, I looked for off-the-shelf HR solutions first. There were many applications that satisfies the needs of the company to some extent, but each one was a bit disappointing.
+
+First of all, there was no solution that works with Office 365. If you use the HR solution, it would be difficult to add one more tool as we just united 7 tools into 2. As more tools were added, the office team had to create and delete staff accounts of the solution. In addition, there was no solution to support multiple stores. A staff's total working hours had to be calculated by adding up the working hours in multiple stores.
+
+# Solution but another start
+Again, there was no product in the market that met all the requirements. After seeking advice, I heard that Office365 and FlexiTime both have external APIs, so if we create a web application, we could solve this problem.
+
+So, in the end, I decided to make one. I wanted to get rid of the paper piled up in the head office warehouse. That was the reason I started programming.
+
+The first goal is to automate the staff onboarding process. Because of the complexity of legal issues, I decided to put off payruns for a while. I thought that if only the account creation and the check of required documents for employees were automated, the office workload would be reduced and payruns delayed due to human errors would be reduced.
+
+At the time, when I didn't know exactly what a web application was, I found an online course saying anyone could make a web app in just a few months and started studying programming. After work, before work, and on weekends I studied HTML, CSS, and JavaScript. When I first started, it was more difficult than I thought. It was hard to keep up with the progress because there were full of things I didn't know. After about three months of intense study, I was able to make a prototype.
+
+In 2019 I learned HTML, CSS, and JavaScript to prototype Garage using the Express server and the Pug view template engine. I deployed it on Heroku. I remember it took over 6 hours due to a lack of understanding of the deployment. In the end, I was able to automate the onboarding process.
+
+Once an operation team enter a new employee's email and position in Garage, an Office365 account is created, and account login information and welcome email are sent to the employee email. Then, according to the welcome email, the employee accesses the Garage and directly fills in the required information and uploads documents, and the office only has to confirm it.
+![img.png](/static/images/blog/why-did-i-start-programming-2/image-2.png)
+Very cute early Garage
+![img.png](/static/images/blog/why-did-i-start-programming-2/image-3.png)
+Garage in 2022 with a lot of progress
+
+I showed the prototype to the company and got approval. The application was developed through continuous study and eventually became the core solution of the company. However, there are still areas for improvement. When I started programming, I thought, "If I could program just that much, I would be able to solve a lot of things.".I can do much more than I had set goals at that time but I still get the same thought.
+
+# Retrospect
+I looked back on why I started development as an office manager. I started programming as a part of problem-solving. As it turns out, programming is fun and I made for it, so I have been doing it up to now. What makes programming attractive to me is that I can continue to learn and use new things to solve problems for myself and others.
