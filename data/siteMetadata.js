@@ -1,19 +1,19 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: `Hoon Jung - Software Engineer`,
-  author: 'Hoon Jung',
-  headerTitle: 'Hoon Jung',
-  description: `Software engineering: A journey of curiosity, questions, and exploration`,
+  title: `Jean Jang - Software Engineer`,
+  author: 'Jean Jang',
+  headerTitle: 'JEAN JANG',
+  description: `A software engineer who enjoys turning real-world problems into practical solutions`,
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://blog.hoonjung.me',
-  siteRepo: 'https://github.com/go-hoon/blog.hoonjung.me',
-  siteLogo: '/static/images/logo.svg',
+  siteUrl: 'https://jeanjang.com',
+  siteRepo: 'https://github.com/jeannjang/jeanjang.com',
+  // siteLogo: '/static/images/logo.svg',
   socialBanner: '/static/images/sns-banner.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'jhoon5245@gmail.com',
-  github: 'https://github.com/go-hoon',
-  linkedin: 'https://www.linkedin.com/in/hoon-jung-a473031b4/',
+  email: 'jeanjyjh@gmail.com',
+  github: 'https://github.com/jeannjang',
+  linkedin: 'https://www.linkedin.com/in/jean-jang-28326a354',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
